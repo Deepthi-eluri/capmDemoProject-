@@ -1,0 +1,79 @@
+###
+GET  http://localhost:4004/odata/v4/employee/EmployeeServiceTable
+###
+POST http://localhost:4004/odata/v4/employee/EmployeeServiceTable
+Content-Type: application/json
+
+{
+    "emp_id":"004",
+    "emp_name":"Pranavi",
+    "emp_experience": 3
+}
+###
+PATCH http://localhost:4004/odata/v4/employee/EmployeeServiceTable(emp_id='004')
+Content-Type: application/json
+
+{
+    "emp_experience": 5
+}
+
+###
+DELETE http://localhost:4004/odata/v4/employee/EmployeeServiceTable(emp_id='003')
+
+###
+POST http://localhost:4004/odata/v4/employee/StudentServiceTable
+Content-Type: application/json
+
+{
+    "student_id":"S004",
+    "student_name":"Karthik",
+    "student_grade":6
+}
+###
+GET http://localhost:4004/odata/v4/employee/StudentServiceTable
+###
+DELETE http://localhost:4004/odata/v4/employee/StudentServiceTable(student_id='S006')
+
+###
+POST http://localhost:4004/odata/v4/employee/employeeAttendance
+Content-Type: application/json
+
+{
+    "emp_id" : "003",
+    "date" : "2024-05-24"
+}
+
+###
+POST http://localhost:4004/odata/v4/employee/bookingSiteLogin
+Content-Type: application/json
+
+{
+    "mobile_no": "8884684563",
+    "password":"Deepthi"
+}
+
+###
+POST http://localhost:4004/odata/v4/employee/previousEmployee
+Content-Type: application/json
+
+{
+    "emp_id": "002"
+}
+
+###
+POST http://localhost:4004/odata/v4/employee/busSelected
+Content-Type: application/json
+
+{
+    "bus_name": "SRK",
+    "seats_needed":3
+}
+
+###
+GET http://localhost:4004/odata/v4/employee/StudentsMarks?$filter=student_id eq 's001'       
+
+###
+GET http://localhost:4004/odata/v4/employee/CompleteStudentInformation(student_id='s001')
+
+###
+GET http://localhost:4004/odata/v4/employee/Owners(owner_id='o001')
