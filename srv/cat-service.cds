@@ -19,4 +19,6 @@ service EmployeeService {
     entity CompleteStudentInformation as projection on practiceCapm.CompleteStudentInformation;
     entity Owners as projection on practiceCapm.Owners;
     entity Cars as projection on practiceCapm.Cars;
-}
+    entity BikeOwners as projection on practiceCapm.BikeOwners;
+    entity Teachers as projection on practiceCapm.Teachers;
+    }

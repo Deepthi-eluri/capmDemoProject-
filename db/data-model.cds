@@ -100,3 +100,12 @@ entity Cars{
     key car_no : String(10);
         car_name: String(10)
 }
+
+entity BikeOwners{
+    key owner_id : String(5);
+        owner_name: String(30);
+}
+entity Teachers{
+    key teacher_id: String(5);
+        teacher_name: String(15);
+}
