@@ -21,4 +21,31 @@ service EmployeeService {
     entity Cars as projection on practiceCapm.Cars;
     entity BikeOwners as projection on practiceCapm.BikeOwners;
     entity Teachers as projection on practiceCapm.Teachers;
+
+    type StudentDetails{
+        student_id: String;
+        student_name: String;
+        teacher_id: String;
+        teacher_name: String;
+    };
+    function getStudentDetails(student_id: String,teacher_id: String) returns StudentDetails;
+    action fetchStudentDetails(student_id: String,teacher_id: String) returns StudentDetails;
+
+    entity viewforStudentandParents as select
+    key S.student_id,
+        S.student_name,
+    key P.parent_id,
+        P.parent_name
+    from StudentServiceTable as S
+    inner join Parents as P
+    on S.student_id = P.student_id;
+
+    entity StudentandParents as select
+    key S.student_id,
+        S.student_name,
+    key P.parent_id,
+        P.parent_name
+    from StudentServiceTable as S
+    left outer join Parents as P
+    on S.student_id = P.student_id
     }

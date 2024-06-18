@@ -77,3 +77,15 @@ GET http://localhost:4004/odata/v4/employee/CompleteStudentInformation(student_i
 
 ###
 GET http://localhost:4004/odata/v4/employee/Owners(owner_id='o001')
+
+###
+GET http://localhost:4004/odata/v4/employee/getStudentDetails(student_id='S001',teacher_id='T002')
+
+###
+POST http://localhost:4004/odata/v4/employee/fetchStudentDetails
+Content-Type: application/json
+
+{
+ "student_id":"S003",
+ "teacher_id":"T001"   
+}

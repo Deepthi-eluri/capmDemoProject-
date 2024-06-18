@@ -8,7 +8,7 @@ entity students{
 
 entity Parents{
     key parent_id: String(10);
-    key kid_id: String(10);
+    key student_id: String(10);
         parent_name: String(25)
 }
 
